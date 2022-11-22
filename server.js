@@ -32,6 +32,7 @@ app.get('/allStudents', function(req,res)
 {
     data.allStudents().then(function(message)
     {
+        
       res.render("students",{data:message})
     }).catch(function (message) {
         res.json(`Error: ${message}`)
