@@ -1,12 +1,15 @@
+//Test-3
+// Name: Tanvir Singh
+//Student id: 104642210
 //cyclic url :  https://erin-dead-python.cyclic.app/
 const { Console } = require("console");
 const express = require("express"); // Include express.js module
 const app = express();
 var path = require("path");
-var data = require('./test2/test2_moduleA.js')
+var data = require('./test3/test3_moduleA.js')
 var HTTP = process.env.PORT || 8080;  
 const exphbs = require("express-handlebars");
-app.use(express.static(path.join(__dirname, 'test2/public')))
+app.use(express.static(path.join(__dirname, 'test3/public')))
 app.engine('.hbs', exphbs.engine({ extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
@@ -56,7 +59,6 @@ data.init().then(function (message) {
 app.listen(HTTP, function () {
 
     console.log("Express http server listening on: " + HTTP);
-    //console.log(message)
 });
 }).catch(function (err) {
     console.log("Error: " + err);

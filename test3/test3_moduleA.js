@@ -6,7 +6,7 @@ module.exports.init = function()
 {
     return new Promise(function (resolve, reject) {
   
-    fs.readFile("./test2/students.json", function (err, data) {
+    fs.readFile("./test3/students.json", function (err, data) {
         if (err) {
             console.log(err.message);
             reject("Failure to read file students.json!");
