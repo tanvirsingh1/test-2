@@ -45,7 +45,7 @@ module.exports.highGPA = function()
     return new Promise(function (resolve, reject) {
        
 
-        var BSD2= [];
+        var BSD2;
         var BSD  = Object.create(students);
         
        BSD[0].gpa = 0
@@ -55,10 +55,22 @@ module.exports.highGPA = function()
              
             }
         }
-       BSD2[0] = BSD[0]
+       BSD2 = BSD[0]
         if (BSD2.length == 0)
             reject("no results returned")
         else
             resolve(BSD2);
+    })
+}
+module.exports.allStudents = function()
+{
+    return new Promise(function (resolve, reject) {
+      if(students.length> 0)
+      {
+        resolve(students);
+      }
+      else{
+        reject("No results returned")
+      }
     })
 }

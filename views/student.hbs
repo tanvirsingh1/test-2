@@ -1,0 +1,13 @@
+<body>
+    <h2>Student Info</h2>
+
+    {{#if data}}
+    <p> Student Id: {{data.studId}}</p>
+        <p> Name: {{data.name}}</p>
+            <p> Program: {{data.program}}</p>
+                    <p> GPA: {{data.gpa}}</p>
+    {{else}}
+    <p>No Results Found!</p>
+
+    {{/if}}
+</body>
